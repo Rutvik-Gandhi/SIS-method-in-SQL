@@ -1,0 +1,272 @@
+﻿W23 PROG8080 Section 3
+Assignment 1
+ 
+Rutvik Gandhi
+ 
+Jan 29 2023  9:32PM
+ 
+List all data from the AcademicStatus table.
+ 
+code explanation               frenchExplanation
+---- ------------------------- -------------------------
+D    Discontinued              Abandonnées
+N    Normal                    À temps plein, actif
+S    Suspended                 Suspendue
+
+(3 rows affected)
+
+List number and academicStatusCode for all students who have been 
+	discontinued. List the results in descending order by number.
+ 
+number  academicStatuscode
+------- ------------------
+7826662 D
+5613716 D
+5582770 D
+5123120 D
+3223278 D
+2238665 D
+1335314 D
+
+(7 rows affected)
+
+List number and academicStatusCode for all students who have been 
+	discontinued or suspended. List the results in ascending order by number. Use
+	“<>“ operator as part of your solution. Do not use OR or NOT.
+ 
+number  academicStatusCode
+------- ------------------
+1335314 D
+2238665 D
+3223278 D
+5123120 D
+5166111 S
+5473160 S
+5582770 D
+5613716 D
+5832548 S
+6484885 S
+7826662 D
+8412280 S
+8588766 S
+
+(13 rows affected)
+
+List the province code the persons are from, but show each province code
+	only once (i.e., no duplicates). List the results in descending order by 
+	province code.
+ 
+provinceCode
+------------
+ON
+NS
+CA
+AB
+NULL
+
+(5 rows affected)
+
+List the province code the persons are from (i.e., no duplicates) with 
+	the NULL value excluded in the output.
+ 
+provinceCode
+------------
+AB
+CA
+NS
+ON
+
+(4 rows affected)
+
+List number, last name, first name, city, and country for persons who 
+	does not have a province code assigned.
+ 
+number  lastname                                           firstname                                          city                           countryCode
+------- -------------------------------------------------- -------------------------------------------------- ------------------------------ -----------
+1114453 WANG                                               YOU-FANG                                           PU MIAO                        CHN
+1448422 SINGH                                              SARDAR                                             NEW DELHI                      IND
+1524560 RAYCHAUDHURI                                       RAJKUMAR                                           NEW DELHI                      IND
+1525872 HE                                                 XIAO-LAN                                           CHENG GUAN                     CHN
+1583129 GOVINDARAJAN                                       SURESH                                             MUMBAI                         IND
+1741420 RAJARAMAN                                          ANAND                                              NEW DELHI                      IND
+1846682 HU                                                 REN-LIANG                                          NANPING                        CHN
+2156685 FU                                                 XING                                               CHONGQUING                     CHN
+2214617 KAR                                                SAYAN                                              NEW DELHI                      IND
+2411767 CAO                                                TONG                                               YONZHOU                        CHN
+2858629 ZANG                                               MU                                                 XIN XIANG                      CHN
+3331840 KUMAR                                              ANANT                                              NEW DELHI                      IND
+3383189 ZHONG                                              BEN-DU                                             DONG GUAN                      CHN
+3583317 RAHA                                               SHIBAJI                                            JAIPUR                         IND
+3621323 LIN                                                PAN-JUAN                                           FOSHAN                         CHN
+4171617 DAS                                                BHANU                                              LUCKNOW                        IND
+4331740 LI                                                 ZHI-HUA                                            WU XI                          CHN
+4337333 TOMASZEWSKI                                        TADEUSZ                                            RASZYN                         POL
+4823589 CHAUDHURY                                          HABIB                                              NEW DELHI                      IND
+4878237 DHYANAPEETAM                                       NITYANANDA                                                                        IND
+5383336 SENGUPTA                                           SOUMITRO                                           BHOPAL                         IND
+5386651 LAKSHMANAN                                         VIVEK                                              NEW DELHI                      IND
+5473160 BABU                                               RAMESH                                             NEW DELHI                      IND
+5561733 ZHANG                                              LI                                                 XIAOGAN                        CHN
+5722566 ZENG                                               SHU-YING                                           HANG ZHOU                      CHN
+5785845 THANGADURAI                                        VENKATARAMAN                                       NEW DELHI                      IND
+6117857 ASTHANA                                            PRAVEER                                            NEW DELHI                      IND
+6148753 LIU                                                ZHONG-LING                                         LIAN ZHOU                      CHN
+6286264 RANGWALA                                           ABBAS                                              INDORE                         IND
+6332381 W                                                  PENG-CHENG                                         SHUO ZHOU                      CHN
+6522569 GAO                                                CHIEN                                              CHONGQING                      CHN
+7118532 AO                                                 ZHI-WEN                                            CHUZHOU                        CHN
+7177611 LUO                                                JIAN-XIN                                           FU SHUN                        CHN
+7381874 MUKHI                                              VIJAY                                              CHENNAI                        IND
+7561574 KARJOL                                             GOVIND                                             BANGALORE                      IND
+7677479 PANDITA                                            RAMABAI                                            NEW DELHI                      IND
+7758774 MUKHERJEE                                          JOIA                                               NEW DELHI                      IND
+7762586 ZHANG                                              XAN-XIANG                                          GANZHOU                        CHN
+8516189 WANG                                               MEI-ZHI                                            YIZHOU                         CHN
+8518680 ABBA                                               ALKASUM                                            ABUJA                          NGA
+8826646 BAJCHI                                             BIJAN                                              NEW DELHI                      IND
+
+(41 rows affected)
+
+List number, last name, first name, city, and country for persons with 
+	first name that starts with “AND” followed by any single character.
+ 
+number  lastname                                           firstname                                          city                           countryCode
+------- -------------------------------------------------- -------------------------------------------------- ------------------------------ -----------
+1686856 ILLING                                             ANDY                                               KITCHENER                      CAN
+2262434 JOHNSON                                            ANDI                                               KITCHENER                      CAN
+
+(2 rows affected)
+
+List all data from the Program table with program name that starts with
+	‘Computer’.
+ 
+code  acronym campusCode schoolCode credentialCode name                                               frenchName
+----- ------- ---------- ---------- -------------- -------------------------------------------------- --------------------------------------------------
+0057C CPA     D          EIT        OCAD           Computer Programmer/Analyst (Coop)                 Programmeur / Analyste (Coop)
+0066C CAD     D          EIT        OCGC           Computer Applications Development (Coop)           Développement d'applications informatiques (Coop)
+1009  CP      D          EIT        OCD            Computer Programmer                                Programmeur
+
+(3 rows affected)
+
+List the code, acronym and name of the programs with program name that 
+	contains ‘coop’.
+ 
+code  acronym name
+----- ------- --------------------------------------------------
+0040C ITID    IT Innovation and Design (Coop)
+0057C CPA     Computer Programmer/Analyst (Coop)
+0066C CAD     Computer Applications Development (Coop)
+1097C ITSS    Information Technology Support Services (Coop)
+
+(4 rows affected)
+
+List all data for students with final mark that is lower than 55. Do not
+	display final mark that is zero.
+ 
+CourseOfferingId studentNumber finalMark
+---------------- ------------- ----------------------
+9                3526415       53
+9                5767777       54
+9                5785845       50
+9                8653370       51
+19               1114453       52
+19               6471585       51
+19               8317323       54
+29               2866564       52
+29               3117777       53
+29               5727664       53
+29               8414815       53
+
+(11 rows affected)
+
+List the number, capacity and memory of any room that has a capacity 
+	greater than or equal to 40, is a lab, has computers with 4GB memory, 
+	and is located at the Doon campus.
+ 
+number capacity    memory
+------ ----------- ----------
+2A220  40          4GB
+
+(1 row affected)
+
+List all employees who teach in the School of Trades and Apprenticeship 
+	and are located at the Doon, Guelph or Waterloo campus.
+ 
+number  reportsTo campusCode schoolCode location                       businessPhone                  extension fax            encryptedSin
+------- --------- ---------- ---------- ------------------------------ ------------------------------ --------- -------------- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+6860242 NULL      D          TAP        3B21                           (519) 748-5220                 1795      (519) 189-3239 0x00F1C818B65ED2449DB177C72EB5505502000000E8360BABC7B8209D408DD25B1FBADBE87563858C96C3761DB003CCF3086317D6
+6886352 8436780   G          TAP        23                             (519) 748-5220                 6742      NULL           0x00F1C818B65ED2449DB177C72EB5505502000000FD20DAF89F6A537FBC5882B2DF3F1E5678E15444F6DBFA9657EF08299E2D2271
+8436780 NULL      D          TAP        4B179                          (519) 748-5220                 7361      (519) 189-3239 0x00F1C818B65ED2449DB177C72EB55055020000009FD2E03AA4B9A3D0AFB3D89F03E1B1B7216E19F4EBFBADA7C121FF2C991C5668
+
+(3 rows affected)
+
+List the “last name” and the “user id” for all persons whose last name 
+	starts with ‘J’. The user id consists of the first letter of the first name
+		and the first seven letters of the last name, all in lower case. 
+		Alias the user id ‘User ID’, and sort the results in descending ‘User ID’
+		order. Use either LEFT() or SUBSTRING() as you wish.
+ 
+lastname                                           user ID
+-------------------------------------------------- --------
+JACOBS                                             TJACOBS
+JUELL                                              MJUELL
+JOLLIFF                                            MJOLLIFF
+JOHNSON                                            MJOHNSON
+JETER                                              LJETER
+JUSTUS                                             GJUSTUS
+JAMES                                              DJAMES
+JIRASEK                                            CJIRASEK
+JOHNSON                                            AJOHNSON
+JAYSURA                                            AJAYSURA
+
+(10 rows affected)
+
+List number, birth date aliased as ‘dob’, and calculated age aliased as 
+	‘age’, for persons that are over 60 years old as of today. Use FORMAT() to 
+	display ‘dob’ in the format similar to “January 01, 2022”. Use DATEDIFF() 
+	to calculate the ‘age’.
+ 
+number  dob                                                                                                                                                                                                                                                              age
+------- ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -----------
+3566163 July 19, 1960                                                                                                                                                                                                                                                    63
+6434468 January 11, 1960                                                                                                                                                                                                                                                 63
+6860242 February 28, 1961                                                                                                                                                                                                                                                62
+6886352 February 12, 1959                                                                                                                                                                                                                                                64
+8135170 November 12, 1952                                                                                                                                                                                                                                                71
+
+(5 rows affected)
+
+List number aliased as ‘Course Code’ and name aliased as ‘Course Name’ 
+	for all courses that have the word ‘Game’ in their name. Use CHARINDEX() as
+	part of your solution. Do not use LIKE.
+ 
+Course Code Course Name
+----------- ----------------------------------------------------------------------
+INFO3140    System Development: Game Design
+PROG2250    Programming: Object Oriented Game Programming
+
+(2 rows affected)
+
+College management would like to see the new values that will result if 
+	all incidental fees are increased by 10%. Show item aliased as ‘Incidental Fee Item’.
+	Show amountPerSemester aliased as ‘Current Fee’. Use an expression to 
+	calculate the increased fee and alias the output as ‘Increased Fee’. Order 
+	the results in ascending order using the ‘Current Fee’ alias. Align the 
+	output to two decimal places.
+ 
+Incidental Fee Item                                          Current Fee                             Increased Fee
+------------------------------------------------------------ --------------------------------------- ---------------------------------------
+CSA Fee                                                      4.50                                    4.95
+Graduation/Alumni Services Fee                               18.56                                   20.42
+Administration Fee                                           20.60                                   22.66
+Student Priority Fee                                         45.46                                   50.01
+CSI Capital Development Fee - Doon Campus                    52.77                                   58.05
+Recreation/Athletics Fee                                     63.17                                   69.49
+CSI Association Fee - Doon Campus                            77.50                                   85.25
+Technology Enhancement Fee                                   117.05                                  128.76
+CSI Health Plan                                              185.68                                  204.25
+
+(9 rows affected)
+
+
+Completion time: 2023-01-29T21:32:54.3994182-05:00
